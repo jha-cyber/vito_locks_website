@@ -50,19 +50,21 @@
         <input
           type="text"
           id="searchInput"
-          placeholder="Search by name, type, or feature… e.g. 'padlock', 'TSA', 'weatherproof'"
+          placeholder="Search by name, type, or feature… e.g. 'hinges', 'multi lock', 'door handles'"
           autocomplete="off"
         />
         <button class="search-clear" id="searchClear" title="Clear search">✕</button>
       </div>
       <div class="filter-chips" id="filterChips">
         <button class="chip active ripple-btn" data-filter="all">All</button>
-        <button class="chip ripple-btn" data-filter="padlock">Padlocks</button>
-        <button class="chip ripple-btn" data-filter="door">Door Locks</button>
-        <button class="chip ripple-btn" data-filter="cam">Cam Locks</button>
-        <button class="chip ripple-btn" data-filter="combination">Combo Locks</button>
-        <button class="chip ripple-btn" data-filter="disc">Disc Locks</button>
-        <button class="chip ripple-btn" data-filter="oem">OEM / Custom</button>
+        <button class="chip ripple-btn" data-filter="hinges">Hinges</button>
+        <button class="chip ripple-btn" data-filter="corners">Corners</button>
+        <button class="chip ripple-btn" data-filter="multi-lock">Multi Lock</button>
+        <button class="chip ripple-btn" data-filter="cupboard-lock">Cupboard Lock</button>
+        <button class="chip ripple-btn" data-filter="sliding-door-lock">Sliding Door Lock</button>
+        <button class="chip ripple-btn" data-filter="aluminium-section-lock">Aluminium Section Lock</button>
+        <button class="chip ripple-btn" data-filter="cloth-hook">Cloth Hook</button>
+        <button class="chip ripple-btn" data-filter="door-handles">Door Handles</button>
       </div>
     </div>
   </div>
@@ -95,21 +97,30 @@
         <label for="qProduct">Product *</label>
         <select id="qProduct" required>
           <option value="">— Select a product —</option>
-          <option value="Padlocks — Brass Series (20–40mm)">Padlocks — Brass Series (20–40mm)</option>
-          <option value="Padlocks — Steel Series (40–80mm)">Padlocks — Steel Series (40–80mm)</option>
-          <option value="Padlocks — Zinc Alloy (20–60mm)">Padlocks — Zinc Alloy (20–60mm)</option>
-          <option value="Door Locks — Mortise Lock Set">Door Locks — Mortise Lock Set</option>
-          <option value="Door Locks — Cylindrical Knob Lock">Door Locks — Cylindrical Knob Lock</option>
-          <option value="Door Locks — Double Cylinder Deadbolt">Door Locks — Double Cylinder Deadbolt</option>
-          <option value="Cam Locks — 16mm Tubular">Cam Locks — 16mm Tubular</option>
-          <option value="Cam Locks — 22mm Tubular">Cam Locks — 22mm Tubular</option>
-          <option value="Cam Locks — 30mm Heavy Duty">Cam Locks — 30mm Heavy Duty</option>
-          <option value="Combination Locks — 3-Wheel Resettable">Combination Locks — 3-Wheel Resettable</option>
-          <option value="Combination Locks — TSA Approved Travel Lock">Combination Locks — TSA Approved Travel Lock</option>
-          <option value="Combination Locks — 4-Digit Locker Lock">Combination Locks — 4-Digit Locker Lock</option>
-          <option value="Disc Detainer Locks — Standard">Disc Detainer Locks — Standard</option>
-          <option value="Disc Detainer Locks — Heavy Duty Gate Lock">Disc Detainer Locks — Heavy Duty Gate Lock</option>
-          <option value="OEM / Custom Locks">OEM / Custom Locks</option>
+          <option value="Hinges — 4&quot; Stainless Steel Ball Bearing Butt Hinge">Hinges — 4" Stainless Steel Ball Bearing Butt Hinge</option>
+          <option value="Hinges — Hydraulic Soft-Close Concealed Cabinet Hinge">Hinges — Hydraulic Soft-Close Concealed Cabinet Hinge</option>
+          <option value="Hinges — Heavy-Duty Welded Bullet Hinge for Steel Gates">Hinges — Heavy-Duty Welded Bullet Hinge for Steel Gates</option>
+          <option value="Corners — 90° Heavy-Duty Stainless Steel Corner Joint Bracket">Corners — 90° Heavy-Duty Stainless Steel Corner Joint Bracket</option>
+          <option value="Corners — Decorative Brass Box &amp; Trunk Corner Protectors">Corners — Decorative Brass Box & Trunk Corner Protectors</option>
+          <option value="Corners — L-Shaped Structural Corner Brace (Pack of 50)">Corners — L-Shaped Structural Corner Brace (Pack of 50)</option>
+          <option value="Multi Lock — 4-Point High Security Central Locking System">Multi Lock — 4-Point High Security Central Locking System</option>
+          <option value="Multi Lock — Mortise Multi-Point Gear Lock for Armored Doors">Multi Lock — Mortise Multi-Point Gear Lock for Armored Doors</option>
+          <option value="Multi Lock — Rod-Actuated Safe &amp; Vault Multi-Lock Mechanism">Multi Lock — Rod-Actuated Safe & Vault Multi-Lock Mechanism</option>
+          <option value="Cupboard Lock — 19mm Zinc Alloy Cam &amp; Drawer Lock">Cupboard Lock — 19mm Zinc Alloy Cam & Drawer Lock</option>
+          <option value="Cupboard Lock — Digital RFID &amp; Keypad Cabinet Lock">Cupboard Lock — Digital RFID & Keypad Cabinet Lock</option>
+          <option value="Cupboard Lock — Push-Button Latch Lock for Marine &amp; RV Cupboards">Cupboard Lock — Push-Button Latch Lock for Marine & RV Cupboards</option>
+          <option value="Sliding Door Lock — Heavy-Duty Hook Deadbolt Mortise Lock">Sliding Door Lock — Heavy-Duty Hook Deadbolt Mortise Lock</option>
+          <option value="Sliding Door Lock — Flush Pocket Door Pull Lock Set">Sliding Door Lock — Flush Pocket Door Pull Lock Set</option>
+          <option value="Sliding Door Lock — Patio Glass Door Keyed Lock with Finger Pull">Sliding Door Lock — Patio Glass Door Keyed Lock with Finger Pull</option>
+          <option value="Aluminium Section Lock — Narrow Stile Hook Bolt for Aluminum Profiles">Aluminium Section Lock — Narrow Stile Hook Bolt for Aluminum Profiles</option>
+          <option value="Aluminium Section Lock — Euro Cylinder Profile Lock Set">Aluminium Section Lock — Euro Cylinder Profile Lock Set</option>
+          <option value="Aluminium Section Lock — Crescent Latch for Aluminum Sliding Windows">Aluminium Section Lock — Crescent Latch for Aluminum Sliding Windows</option>
+          <option value="Cloth Hook — Matte Black Solid Brass Double Coat &amp; Hat Hook">Cloth Hook — Matte Black Solid Brass Double Coat & Hat Hook</option>
+          <option value="Cloth Hook — 304 Stainless Steel Foldable Wall Hook Rack (5-Hook)">Cloth Hook — 304 Stainless Steel Foldable Wall Hook Rack (5-Hook)</option>
+          <option value="Cloth Hook — Heavy-Duty Industrial Robe Hook with Hidden Screws">Cloth Hook — Heavy-Duty Industrial Robe Hook with Hidden Screws</option>
+          <option value="Door Handles — Premium Architectural Lever Handle on Round Rose">Door Handles — Premium Architectural Lever Handle on Round Rose</option>
+          <option value="Door Handles — 600mm Stainless Steel H-Shaped Pull Handle for Entrance">Door Handles — 600mm Stainless Steel H-Shaped Pull Handle for Entrance</option>
+          <option value="Door Handles — Solid Brass Antique Finish Mortise Handle with Plate">Door Handles — Solid Brass Antique Finish Mortise Handle with Plate</option>
         </select>
       </div>
 

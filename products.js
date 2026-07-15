@@ -4,140 +4,236 @@
 // PRODUCT DATA
 // ============================================================
 const PRODUCTS = [
+  // 1. HINGES
   {
     id: 1,
-    name: 'Padlocks — Brass Series (20–40mm)',
-    emoji: '🔒',
-    category: 'padlock',
-    desc: 'Solid brass body padlocks in 20mm, 25mm, 30mm, and 40mm. Dual-locking shackle, 4-pin tumbler, and anti-drill brass cylinder.',
-    tags: ['Brass Core', 'Anti-Drill', '4-Pin Tumbler'],
-    moq: '500 pcs'
+    name: 'Hinges — 4" Stainless Steel Ball Bearing Butt Hinge',
+    emoji: '🔧',
+    category: 'hinges',
+    desc: 'Heavy-duty 304 stainless steel butt hinge with smooth ball bearing mechanism. Corrosion-resistant finish, ideal for high-traffic commercial and residential doors.',
+    tags: ['304 Stainless', 'Ball Bearing', 'Commercial Grade'],
+    moq: '500 pairs'
   },
   {
     id: 2,
-    name: 'Padlocks — Steel Series (40–80mm)',
-    emoji: '🔒',
-    category: 'padlock',
-    desc: 'Heavy-duty steel padlocks with hardened steel shackle. Weatherproof design with rubber cover, ideal for outdoor and industrial use.',
-    tags: ['Hardened Shackle', 'Weatherproof', 'Industrial'],
-    moq: '300 pcs'
-  },
-  {
-    id: 3,
-    name: 'Padlocks — Zinc Alloy (20–60mm)',
-    emoji: '🔒',
-    category: 'padlock',
-    desc: 'Lightweight zinc alloy die-cast padlocks with corrosion-resistant nickel plating. Popular for luggage, lockers, and general use.',
-    tags: ['Zinc Alloy', 'Nickel Plated', 'Lightweight'],
+    name: 'Hinges — Hydraulic Soft-Close Concealed Cabinet Hinge',
+    emoji: '🗄️',
+    category: 'hinges',
+    desc: 'Clip-on 3D adjustable concealed hinge with integrated hydraulic damper for silent, soft-closing action. 110° opening angle for kitchen and wardrobe cabinets.',
+    tags: ['Soft-Close', '3D Adjustable', '110° Opening'],
     moq: '1000 pcs'
   },
   {
+    id: 3,
+    name: 'Hinges — Heavy-Duty Welded Bullet Hinge for Steel Gates',
+    emoji: '🔩',
+    category: 'hinges',
+    desc: 'Precision-turned weld-on bullet hinge with brass grease nipple and stainless steel pin. Built for heavy industrial steel gates, security doors, and containers.',
+    tags: ['Weld-On Bullet', 'Grease Nipple', 'High Load Capacity'],
+    moq: '300 pairs'
+  },
+
+  // 2. CORNERS
+  {
     id: 4,
-    name: 'Door Locks — Mortise Lock Set',
-    emoji: '🚪',
-    category: 'door',
-    desc: 'Full mortise lock set including latch, deadbolt, handles, and escutcheon plates. Stainless steel finish, ANSI Grade 2 compliant.',
-    tags: ['ANSI Grade 2', 'SS Finish', 'Full Set'],
-    moq: '200 sets'
+    name: 'Corners — 90° Heavy-Duty Stainless Steel Corner Joint Bracket',
+    emoji: '📐',
+    category: 'corners',
+    desc: 'Thick-gauge reinforced 90-degree angle corner bracket. Counter-sunk screw holes for flush mounting on structural timber, metal frames, and heavy furniture.',
+    tags: ['Reinforced 90°', '316 SS Grade', 'Flush Mount'],
+    moq: '1000 pcs'
   },
   {
     id: 5,
-    name: 'Door Locks — Cylindrical Knob Lock',
-    emoji: '🚪',
-    category: 'door',
-    desc: 'Standard cylindrical knob lock for residential and light commercial doors. Keyed entry with privacy and passage function options.',
-    tags: ['Keyed Entry', 'Privacy Option', 'Residential'],
-    moq: '300 pcs'
+    name: 'Corners — Decorative Brass Box & Trunk Corner Protectors',
+    emoji: '✨',
+    category: 'corners',
+    desc: 'Ornate antique brass corner protectors designed to safeguard and enhance wooden gift boxes, chests, jewelry cases, and vintage storage trunks.',
+    tags: ['Antique Brass', 'Ornate Design', 'Trunk & Box'],
+    moq: '2000 pcs'
   },
   {
     id: 6,
-    name: 'Door Locks — Double Cylinder Deadbolt',
-    emoji: '🚪',
-    category: 'door',
-    desc: 'High-security double cylinder deadbolt with ANSI Grade 1 rating. 1-inch throw bolt, hardened steel insert, pick-resistant cylinder.',
-    tags: ['ANSI Grade 1', 'Pick-Resistant', '1" Bolt'],
-    moq: '200 pcs'
+    name: 'Corners — L-Shaped Structural Corner Brace (Pack of 50)',
+    emoji: '🏢',
+    category: 'corners',
+    desc: 'Multi-hole zinc-plated structural L-brace for architectural framework, drywall partitioning, and shelving reinforcement. Rust-resistant zinc coating.',
+    tags: ['Zinc Plated', 'Multi-Hole', 'Structural Reinforcement'],
+    moq: '500 packs'
   },
+
+  // 3. MULTI LOCK
   {
     id: 7,
-    name: 'Cam Locks — 16mm Tubular',
-    emoji: '🗄️',
-    category: 'cam',
-    desc: 'Standard 16mm diameter tubular cam lock. Keyed different or keyed alike. 5-pin tumbler. Ideal for cabinets, mailboxes, and display cases.',
-    tags: ['16mm Dia', 'Keyed Alike Option', '5-Pin'],
-    moq: '500 pcs'
+    name: 'Multi Lock — 4-Point High Security Central Locking System',
+    emoji: '🛡️',
+    category: 'multi-lock',
+    desc: 'Advanced 4-point central locking mechanism that secures top, bottom, and side frame points simultaneously. Engineered for steel security doors and vault entrances.',
+    tags: ['4-Point Locking', 'Anti-Pry', 'Central Actuator'],
+    moq: '100 sets'
   },
   {
     id: 8,
-    name: 'Cam Locks — 22mm Tubular',
-    emoji: '🗄️',
-    category: 'cam',
-    desc: 'Medium-duty 22mm cam lock with multiple cam length options (13mm–50mm). Plated zinc body with brass cylinder for corrosion resistance.',
-    tags: ['22mm Dia', 'Multi-Cam', 'Brass Cylinder'],
-    moq: '300 pcs'
+    name: 'Multi Lock — Mortise Multi-Point Gear Lock for Armored Doors',
+    emoji: '🔐',
+    category: 'multi-lock',
+    desc: 'Precision gear-driven mortise lock with high-tensile steel deadbolts and anti-saw hardened pins. Smooth cylinder actuation with reversible latch.',
+    tags: ['Gear-Driven', 'Anti-Saw Pins', 'Armored Door'],
+    moq: '150 sets'
   },
   {
     id: 9,
-    name: 'Cam Locks — 30mm Heavy Duty',
-    emoji: '🗄️',
-    category: 'cam',
-    desc: 'Heavy-duty 30mm cam lock for vending machines, ATMs, and industrial equipment. High-security 7-pin cylinder with double-bit key.',
-    tags: ['30mm Dia', '7-Pin High Security', 'Vending/ATM'],
-    moq: '200 pcs'
+    name: 'Multi Lock — Rod-Actuated Safe & Vault Multi-Lock Mechanism',
+    emoji: '🔒',
+    category: 'multi-lock',
+    desc: 'Heavy-duty vertical and horizontal linkage rod lock for safes, gun cabinets, and ATM enclosures. Compatible with mechanical or digital combination dials.',
+    tags: ['Rod-Actuated', 'Safe & Vault', 'Dual Linkage'],
+    moq: '100 sets'
   },
+
+  // 4. CUPBOARD LOCK
   {
     id: 10,
-    name: 'Combination Locks — 3-Wheel Resettable',
-    emoji: '🔐',
-    category: 'combination',
-    desc: 'User-resettable 3-wheel combination padlock with 1000 combinations. Compact body, ideal for school lockers and storage boxes.',
-    tags: ['Resettable', '3-Wheel', 'Locker Safe'],
-    moq: '500 pcs'
+    name: 'Cupboard Lock — 19mm Zinc Alloy Cam & Drawer Lock',
+    emoji: '🗃️',
+    category: 'cupboard-lock',
+    desc: 'Standard 19mm cylinder cupboard and desk drawer lock with multi-key options (master keying available). Durable nickel-plated finish.',
+    tags: ['19mm Cylinder', 'Master Key Option', 'Nickel Plated'],
+    moq: '1000 pcs'
   },
   {
     id: 11,
-    name: 'Combination Locks — TSA Approved Travel Lock',
-    emoji: '🔐',
-    category: 'combination',
-    desc: 'TSA-approved combination padlock with recognizable red diamond indicator. Compact and lightweight, perfect for luggage and backpacks.',
-    tags: ['TSA Approved', 'Travel Lock', 'Lightweight'],
-    moq: '500 pcs'
-  },
-  {
-    id: 12,
-    name: 'Combination Locks — 4-Digit Locker Lock',
-    emoji: '🔐',
-    category: 'combination',
-    desc: '4-digit resettable combination lock offering 10,000 combinations. Heavy-duty zinc body with hardened steel shackle.',
-    tags: ['4-Digit', '10K Combos', 'Hardened Shackle'],
-    moq: '300 pcs'
-  },
-  {
-    id: 13,
-    name: 'Disc Detainer Locks — Standard',
-    emoji: '🔑',
-    category: 'disc',
-    desc: 'Disc detainer padlock with 5 rotating discs. Extremely pick-resistant. Hardened steel shackle, suitable for chain and gate security.',
-    tags: ['Pick-Resistant', '5-Disc', 'Chain & Gate'],
+    name: 'Cupboard Lock — Digital RFID & Keypad Cabinet Lock',
+    emoji: '🔢',
+    category: 'cupboard-lock',
+    desc: 'Keyless electronic cupboard lock featuring dual RFID card and touch keypad entry. Ideal for gym lockers, office storage, and healthcare facilities.',
+    tags: ['RFID Card + Keypad', 'Battery Operated', 'Keyless Access'],
     moq: '200 pcs'
   },
   {
+    id: 12,
+    name: 'Cupboard Lock — Push-Button Latch Lock for Marine & RV Cupboards',
+    emoji: '🚪',
+    category: 'cupboard-lock',
+    desc: 'Vibration-proof push-button cupboard latch that locks when pressed flush. Prevents doors from opening during transit in yachts, RVs, and mobile homes.',
+    tags: ['Vibration-Proof', 'Marine & RV', 'Push-to-Lock'],
+    moq: '500 pcs'
+  },
+
+  // 5. SLIDING DOOR LOCK
+  {
+    id: 13,
+    name: 'Sliding Door Lock — Heavy-Duty Hook Deadbolt Mortise Lock',
+    emoji: '🚪',
+    category: 'sliding-door-lock',
+    desc: 'Stainless steel hook deadbolt specifically engineered to grip sliding door frames securely. Resists forced lifting and prying attempts.',
+    tags: ['Hook Deadbolt', 'Anti-Lift', 'Mortise Mounted'],
+    moq: '300 sets'
+  },
+  {
     id: 14,
-    name: 'Disc Detainer Locks — Heavy Duty Gate Lock',
-    emoji: '🔑',
-    category: 'disc',
-    desc: 'Large-format disc detainer lock for warehouses, shipping containers, and perimeter gates. 80mm body, 14mm hardened shackle.',
-    tags: ['80mm Body', '14mm Shackle', 'Container Grade'],
-    moq: '100 pcs'
+    name: 'Sliding Door Lock — Flush Pocket Door Pull Lock Set',
+    emoji: '🔲',
+    category: 'sliding-door-lock',
+    desc: 'Sleek recessed flush pull with integrated privacy locking mechanism for timber or glass pocket sliding doors. Modern matte black and satin nickel finishes.',
+    tags: ['Flush Pull', 'Pocket Door', 'Recessed Design'],
+    moq: '250 sets'
   },
   {
     id: 15,
-    name: 'OEM / Custom Locks',
-    emoji: '📦',
-    category: 'oem',
-    desc: 'Custom-branded locks in your logo, color, keyway, and packaging. Full OEM/ODM from tooling to finished product. Fast sample lead time of 7–15 days.',
-    tags: ['Custom Branding', 'Private Label', 'Low MOQ'],
-    moq: 'Negotiable'
+    name: 'Sliding Door Lock — Patio Glass Door Keyed Lock with Finger Pull',
+    emoji: '🪟',
+    category: 'sliding-door-lock',
+    desc: 'Exterior keyed cylinder sliding patio door lock combined with ergonomic interior finger pull. Weather-resistant powder coated alloy housing.',
+    tags: ['Patio Glass Door', 'Exterior Keyed', 'Weather Resistant'],
+    moq: '300 sets'
+  },
+
+  // 6. ALUMINIUM SECTION LOCK
+  {
+    id: 16,
+    name: 'Aluminium Section Lock — Narrow Stile Hook Bolt for Aluminum Profiles',
+    emoji: '🏗️',
+    category: 'aluminium-section-lock',
+    desc: 'Slim 20mm/25mm backset mortise lock tailored for narrow aluminum extrusion doors and shopfront profiles. Hardened steel hook bolt.',
+    tags: ['Narrow Stile', '20mm Backset', 'Shopfront Profile'],
+    moq: '500 pcs'
+  },
+  {
+    id: 17,
+    name: 'Aluminium Section Lock — Euro Cylinder Profile Lock Set',
+    emoji: '🔑',
+    category: 'aluminium-section-lock',
+    desc: 'Complete euro profile cylinder lock set including escutcheons and narrow strike plate for modern aluminum partition framing systems.',
+    tags: ['Euro Profile', 'Complete Set', 'Aluminum Framing'],
+    moq: '300 sets'
+  },
+  {
+    id: 18,
+    name: 'Aluminium Section Lock — Crescent Latch for Aluminum Sliding Windows',
+    emoji: '🪟',
+    category: 'aluminium-section-lock',
+    desc: 'Heavy-duty zinc die-cast crescent window sash lock with smooth cam action. Secures sliding aluminum window sections firmly against weather seals.',
+    tags: ['Crescent Latch', 'Window Sash', 'Cam Action'],
+    moq: '1000 pcs'
+  },
+
+  // 7. CLOTH HOOK
+  {
+    id: 19,
+    name: 'Cloth Hook — Matte Black Solid Brass Double Coat & Hat Hook',
+    emoji: '🧥',
+    category: 'cloth-hook',
+    desc: 'Minimalist double prong cloth and hat hook crafted from solid forged brass with a resilient electroplated matte black finish.',
+    tags: ['Solid Brass', 'Matte Black', 'Double Prong'],
+    moq: '500 pcs'
+  },
+  {
+    id: 20,
+    name: 'Cloth Hook — 304 Stainless Steel Foldable Wall Hook Rack (5-Hook)',
+    emoji: '🔖',
+    category: 'cloth-hook',
+    desc: 'Space-saving folding hook rail with 5 retractable stainless steel arms. Ideal for hotel bathrooms, mudrooms, and commercial dressing suites.',
+    tags: ['Retractable Hooks', '304 Stainless Grade', 'Space Saving'],
+    moq: '300 units'
+  },
+  {
+    id: 21,
+    name: 'Cloth Hook — Heavy-Duty Industrial Robe Hook with Hidden Screws',
+    emoji: '🔗',
+    category: 'cloth-hook',
+    desc: 'Vandal-resistant heavy duty robe hook with concealed mounting plate. Designed for high-turnover public washrooms and commercial establishments.',
+    tags: ['Concealed Mount', 'Vandal Resistant', 'High Capacity'],
+    moq: '500 pcs'
+  },
+
+  // 8. DOOR HANDLES
+  {
+    id: 22,
+    name: 'Door Handles — Premium Architectural Lever Handle on Round Rose',
+    emoji: '🚪',
+    category: 'door-handles',
+    desc: 'Ergonomic solid stainless steel lever handle with sprung heavy-duty metal rose cover. EN 1906 Category of Use Grade 3 certified for commercial corridors.',
+    tags: ['EN 1906 Grade 3', 'Sprung Rose', 'Architectural'],
+    moq: '300 pairs'
+  },
+  {
+    id: 23,
+    name: 'Door Handles — 600mm Stainless Steel H-Shaped Pull Handle for Entrance',
+    emoji: '🏢',
+    category: 'door-handles',
+    desc: 'Contemporary back-to-back H-shaped tubular pull handle (38mm diameter, 600mm length). Perfect for commercial glass doors and main timber entryways.',
+    tags: ['Back-to-Back Pull', '600mm Length', 'Glass & Timber Entry'],
+    moq: '100 pairs'
+  },
+  {
+    id: 24,
+    name: 'Door Handles — Solid Brass Antique Finish Mortise Handle with Plate',
+    emoji: '✨',
+    category: 'door-handles',
+    desc: 'Traditional ornate solid brass mortise handle set mounted on a long decorative backplate. Features smooth spring return and matching keyhole escutcheon.',
+    tags: ['Solid Brass', 'Antique Plate', 'Traditional Luxury'],
+    moq: '200 sets'
   }
 ];
 
