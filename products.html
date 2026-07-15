@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products — Vito Locks | Browse Our Lock Range</title>
+  <meta name="description" content="Browse Vito Locks' full product catalogue. Search by type, adjust quantities, and send a direct product inquiry to our trade team." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="products.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔒</text></svg>" />
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION
+     ============================================================ -->
+<nav id="navbar">
+  <div class="container nav-inner">
+    <div class="nav-logo">
+      <a href="index.html" style="display:flex;align-items:center;gap:10px;">
+        <img src="logo.png" alt="Vito Locks Logo" />
+        <span class="brand">VITO LOCKS</span>
+      </a>
+    </div>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html#about">About Us</a></li>
+      <li><a href="products.html" style="color:var(--accent-light);">Products</a></li>
+      <li><a href="index.html#why">Why Us</a></li>
+      <li><a href="index.html#manufacturing">Quality</a></li>
+      <li><a href="index.html#contact" class="nav-cta ripple-btn">Get a Quote</a></li>
+    </ul>
+    <div class="hamburger" id="hamburger" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- ============================================================
+     PAGE HERO STRIP
+     ============================================================ -->
+<div class="page-hero">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Home</a> <span>›</span> Products</div>
+    <h1 class="page-hero-title">Our Product Catalogue</h1>
+    <p class="page-hero-sub">Browse 200+ SKUs · Adjust quantities · Send direct product inquiries</p>
+
+    <!-- ——— SEARCH BAR ——— -->
+    <div class="search-wrap">
+      <div class="search-box">
+        <span class="search-icon">🔍</span>
+        <input
+          type="text"
+          id="searchInput"
+          placeholder="Search by name, type, or feature… e.g. 'padlock', 'TSA', 'weatherproof'"
+          autocomplete="off"
+        />
+        <button class="search-clear" id="searchClear" title="Clear search">✕</button>
+      </div>
+      <div class="filter-chips" id="filterChips">
+        <button class="chip active ripple-btn" data-filter="all">All</button>
+        <button class="chip ripple-btn" data-filter="padlock">Padlocks</button>
+        <button class="chip ripple-btn" data-filter="door">Door Locks</button>
+        <button class="chip ripple-btn" data-filter="cam">Cam Locks</button>
+        <button class="chip ripple-btn" data-filter="combination">Combo Locks</button>
+        <button class="chip ripple-btn" data-filter="disc">Disc Locks</button>
+        <button class="chip ripple-btn" data-filter="oem">OEM / Custom</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     MAIN LAYOUT: LEFT PANEL + RIGHT PRODUCTS
+     ============================================================ -->
+<main class="products-page container">
+
+  <!-- ======== LEFT: QUERY PANEL ======== -->
+  <aside class="query-panel glass-panel" id="queryPanel">
+    <div class="query-panel-header">
+      <span class="qp-icon">✉️</span>
+      <div>
+        <h2 class="qp-title">Send a Product Query</h2>
+        <p class="qp-sub">Ask about specs, pricing, or samples.</p>
+      </div>
+    </div>
+
+    <!-- Selected product preview -->
+    <div class="selected-product-box" id="selectedProductBox">
+      <p class="sp-label">SELECTED PRODUCT</p>
+      <div class="sp-name" id="spName">None selected</div>
+      <div class="sp-qty" id="spQty"></div>
+    </div>
+
+    <form class="query-form" id="queryForm" novalidate>
+      <div class="form-group">
+        <label for="qProduct">Product *</label>
+        <select id="qProduct" required>
+          <option value="">— Select a product —</option>
+          <option value="Padlocks — Brass Series (20–40mm)">Padlocks — Brass Series (20–40mm)</option>
+          <option value="Padlocks — Steel Series (40–80mm)">Padlocks — Steel Series (40–80mm)</option>
+          <option value="Padlocks — Zinc Alloy (20–60mm)">Padlocks — Zinc Alloy (20–60mm)</option>
+          <option value="Door Locks — Mortise Lock Set">Door Locks — Mortise Lock Set</option>
+          <option value="Door Locks — Cylindrical Knob Lock">Door Locks — Cylindrical Knob Lock</option>
+          <option value="Door Locks — Double Cylinder Deadbolt">Door Locks — Double Cylinder Deadbolt</option>
+          <option value="Cam Locks — 16mm Tubular">Cam Locks — 16mm Tubular</option>
+          <option value="Cam Locks — 22mm Tubular">Cam Locks — 22mm Tubular</option>
+          <option value="Cam Locks — 30mm Heavy Duty">Cam Locks — 30mm Heavy Duty</option>
+          <option value="Combination Locks — 3-Wheel Resettable">Combination Locks — 3-Wheel Resettable</option>
+          <option value="Combination Locks — TSA Approved Travel Lock">Combination Locks — TSA Approved Travel Lock</option>
+          <option value="Combination Locks — 4-Digit Locker Lock">Combination Locks — 4-Digit Locker Lock</option>
+          <option value="Disc Detainer Locks — Standard">Disc Detainer Locks — Standard</option>
+          <option value="Disc Detainer Locks — Heavy Duty Gate Lock">Disc Detainer Locks — Heavy Duty Gate Lock</option>
+          <option value="OEM / Custom Locks">OEM / Custom Locks</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="qName">Your Name *</label>
+        <input type="text" id="qName" placeholder="Full name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="qEmail">Email Address *</label>
+        <input type="email" id="qEmail" placeholder="you@company.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="qQty">Quantity Needed</label>
+        <input type="text" id="qQty" placeholder="e.g. 1000 units/month" />
+      </div>
+
+      <div class="form-group">
+        <label for="qMsg">Your Message *</label>
+        <textarea id="qMsg" rows="5" placeholder="Describe your requirements: material, finish, key-way, packaging, target price, etc." required></textarea>
+      </div>
+
+      <button type="submit" class="btn-submit ripple-btn" id="qSubmitBtn">Send Query →</button>
+    </form>
+
+    <!-- Inquiry summary badge -->
+    <div class="inquiry-summary" id="inquirySummary" style="display:none;">
+      <p class="is-label">INQUIRY BASKET</p>
+      <div id="inquiryList"></div>
+      <button class="btn-clear-basket ripple-btn" id="clearBasket">Clear Basket</button>
+    </div>
+  </aside>
+
+  <!-- ======== RIGHT: PRODUCTS LIST ======== -->
+  <section class="products-right">
+    <div class="products-toolbar">
+      <span class="results-count" id="resultsCount">Showing all 15 products</span>
+      <div class="sort-wrap">
+        <label for="sortSelect">Sort by:</label>
+        <select id="sortSelect">
+          <option value="default">Default</option>
+          <option value="az">Name A–Z</option>
+          <option value="za">Name Z–A</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="product-list" id="productList">
+      <!-- Products injected by JS -->
+    </div>
+
+    <div class="no-results" id="noResults" style="display:none;">
+      <span>🔍</span>
+      <p>No products match your search. Try a different keyword or filter.</p>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER (compact)
+     ============================================================ -->
+<footer id="footer" style="margin-top:60px;">
+  <div class="container">
+    <div class="footer-bottom">
+      <p>© 2024 Vito Locks Manufacturing Co., Ltd. All rights reserved.</p>
+      <span class="made-in">🏭 Made in China — Exported Worldwide</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Toast notification -->
+<div id="toast"></div>
+
+<script src="products.js"></script>
+</body>
+</html>
