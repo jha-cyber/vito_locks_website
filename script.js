@@ -25,21 +25,31 @@ window.addEventListener('scroll', () => {
   });
 });
 
-// ——— Scroll-fade-in animation ———
-// Inject animation styles
-const style = document.createElement('style');
-style.textContent = `
-  .fade-item {
-    opacity: 0;
-    transform: translateY(22px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-  }
-  .fade-item.visible {
-    opacity: 1;
-    transform: translateY(0);
-  }
-`;
-document.head.appendChild(style);
+// ——— BUBBLE / RIPPLE EFFECT on all buttons ———
+document.querySelectorAll('.ripple-btn').forEach(btn => {
+  btn.addEventListener('click', function (e) {
+    // Remove any old ripples
+    const old = this.querySelector('.ripple');
+    if (old) old.remove();
+
+    const circle = document.createElement('span');
+    const diameter = Math.max(this.clientWidth, this.clientHeight);
+    const radius = diameter / 2;
+
+    const rect = this.getBoundingClientRect();
+    circle.style.width  = circle.style.height = `${diameter}px`;
+    circle.style.left   = `${e.clientX - rect.left - radius}px`;
+    circle.style.top    = `${e.clientY - rect.top  - radius}px`;
+    circle.classList.add('ripple');
+
+    this.appendChild(circle);
+
+    // Clean up after animation
+    circle.addEventListener('animationend', () => circle.remove());
+  });
+});
+
+// ——— Scroll-fade-in animation (styles in style.css) ———
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
